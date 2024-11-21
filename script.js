@@ -138,7 +138,7 @@ The Innitt Team`;
 
     const link = document.createElement('a');
     link.href = URL.createObjectURL(blob);
-    link.download = 'enrollment-letter.txt'; 
+    link.download = 'enrollment-letter.pdf'; 
 
     link.click();
 });
