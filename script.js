@@ -121,6 +121,24 @@ document.querySelectorAll('.close-btn').forEach(button => {
 });
 
 document.querySelector('form[action=""]').addEventListener('submit', (event) => {
-    event.preventDefault(); 
+    event.preventDefault();
+
     alert('Thank you for submission, We hope that we\'ll reach back to you soon enough and proceed with your admission');
+
+    const letterContent = `Dear Student,
+
+Thank you for submitting your details to Innitt. We are excited to inform you that your admission process is being reviewed.
+
+We hope to reach out to you soon and proceed with your enrollment.
+
+Best regards,
+The Innitt Team`;
+
+    const blob = new Blob([letterContent], { type: 'text/plain' });
+
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = 'enrollment-letter.txt'; 
+
+    link.click();
 });
