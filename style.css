@@ -226,13 +226,17 @@ section{
     text-align: center;
     padding: 2rem;
     margin-bottom: 4rem;
-    user-select:none;
+    user-select: none;
+    overflow: hidden; 
 }
 
 .courses .slide .img{
-    height: 25rem;
-    width: 100%;
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    object-position: center; 
 }
+
 
 .courses .slide h3{
     margin: 1.5rem 0;
